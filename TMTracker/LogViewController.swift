@@ -1,0 +1,45 @@
+//
+//  LogViewController.swift
+//  TMTracker
+//
+//  Created by Byron Duenas on 2016-01-28.
+//  Copyright © 2016 Em C. All rights reserved.
+//
+
+import UIKit
+
+class LogViewController: UITableViewController {
+    
+    var roles : [String] = []
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        tableView.editing = true
+        print("hello")
+
+        // Uncomment the following line to preserve selection between presentations
+        // self.clearsSelectionOnViewWillAppear = false
+
+        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+
+
+    
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = super.tableView(tableView, cellForRowAtIndexPath: indexPath)
+        cell.selectionStyle = .Blue
+
+        return cell
+    }
+    
+    override func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
+        <#code#>
+    }
+    
+}
