@@ -10,12 +10,11 @@ import UIKit
 
 class LogViewController: UITableViewController {
     
-    var roles : [String] = []
+    var roles : Set<String> = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.editing = true
-        print("hello")
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -39,7 +38,17 @@ class LogViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
-        <#code#>
+        let cell = tableView.cellForRowAtIndexPath(indexPath)
+        roles.remove(cell!.textLabel!.text!)
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let cell = tableView.cellForRowAtIndexPath(indexPath)
+        roles.insert(cell!.textLabel!.text!)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        print(roles)
     }
     
 }
