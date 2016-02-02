@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8A96FA5ED9AC2D4FA3834972 /* libPods-TMTracker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 39E32BAAEA8236DBA69B3DC5 /* libPods-TMTracker.a */; };
 		EBFD36311C5B14D0008AD593 /* TextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFD362F1C5B14D0008AD593 /* TextFieldCell.swift */; };
 		EBFD36321C5B14D0008AD593 /* TextFieldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBFD36301C5B14D0008AD593 /* TextFieldCell.xib */; };
 		EBFD36341C5B1578008AD593 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFD36331C5B1578008AD593 /* ResultsViewController.swift */; };
@@ -16,9 +17,13 @@
 		F762C8FA1C5B012100125280 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F762C8F91C5B012100125280 /* Assets.xcassets */; };
 		F762C8FD1C5B012100125280 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F762C8FB1C5B012100125280 /* LaunchScreen.storyboard */; };
 		F762C9051C5B059400125280 /* LogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F762C9041C5B059400125280 /* LogViewController.swift */; };
+		F77C58BF1C608EBE00E49714 /* electriclove.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F77C58BE1C608EBE00E49714 /* electriclove.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		39E32BAAEA8236DBA69B3DC5 /* libPods-TMTracker.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TMTracker.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		52F7D0D1EBD78323A79202E8 /* Pods-TMTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TMTracker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TMTracker/Pods-TMTracker.debug.xcconfig"; sourceTree = "<group>"; };
+		C7FC05D93D1FFF5E6A3E6BF6 /* Pods-TMTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TMTracker.release.xcconfig"; path = "Pods/Target Support Files/Pods-TMTracker/Pods-TMTracker.release.xcconfig"; sourceTree = "<group>"; };
 		EBFD362F1C5B14D0008AD593 /* TextFieldCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldCell.swift; sourceTree = "<group>"; };
 		EBFD36301C5B14D0008AD593 /* TextFieldCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextFieldCell.xib; sourceTree = "<group>"; };
 		EBFD36331C5B1578008AD593 /* ResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
@@ -30,6 +35,8 @@
 		F762C8FC1C5B012100125280 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F762C8FE1C5B012100125280 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F762C9041C5B059400125280 /* LogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogViewController.swift; sourceTree = "<group>"; };
+		F77C58BA1C608BF800E49714 /* TMTracker-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TMTracker-Bridging-Header.h"; sourceTree = "<group>"; };
+		F77C58BE1C608EBE00E49714 /* electriclove.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = electriclove.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,17 +44,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A96FA5ED9AC2D4FA3834972 /* libPods-TMTracker.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		40EEE86A591D77AAD550DD38 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				52F7D0D1EBD78323A79202E8 /* Pods-TMTracker.debug.xcconfig */,
+				C7FC05D93D1FFF5E6A3E6BF6 /* Pods-TMTracker.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		6FE296B447BF2AD19F2F4370 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				39E32BAAEA8236DBA69B3DC5 /* libPods-TMTracker.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F762C8E61C5B012100125280 = {
 			isa = PBXGroup;
 			children = (
 				F762C8F11C5B012100125280 /* TMTracker */,
 				F762C8F01C5B012100125280 /* Products */,
+				40EEE86A591D77AAD550DD38 /* Pods */,
+				6FE296B447BF2AD19F2F4370 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,6 +89,7 @@
 		F762C8F11C5B012100125280 /* TMTracker */ = {
 			isa = PBXGroup;
 			children = (
+				F77C58BE1C608EBE00E49714 /* electriclove.mp3 */,
 				F762C8F21C5B012100125280 /* AppDelegate.swift */,
 				F762C8F41C5B012100125280 /* ViewController.swift */,
 				F762C8F61C5B012100125280 /* Main.storyboard */,
@@ -72,6 +100,7 @@
 				F762C8FB1C5B012100125280 /* LaunchScreen.storyboard */,
 				F762C8FE1C5B012100125280 /* Info.plist */,
 				F762C9041C5B059400125280 /* LogViewController.swift */,
+				F77C58BA1C608BF800E49714 /* TMTracker-Bridging-Header.h */,
 			);
 			path = TMTracker;
 			sourceTree = "<group>";
@@ -83,9 +112,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F762C9011C5B012100125280 /* Build configuration list for PBXNativeTarget "TMTracker" */;
 			buildPhases = (
+				73AD04B2E64AC1CB55F0290E /* Check Pods Manifest.lock */,
 				F762C8EB1C5B012100125280 /* Sources */,
 				F762C8EC1C5B012100125280 /* Frameworks */,
 				F762C8ED1C5B012100125280 /* Resources */,
+				0870EBC49EC2080276407E91 /* Embed Pods Frameworks */,
+				4138EF6008E4D5803C63DBAD /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -137,11 +169,60 @@
 				F762C8FD1C5B012100125280 /* LaunchScreen.storyboard in Resources */,
 				F762C8FA1C5B012100125280 /* Assets.xcassets in Resources */,
 				F762C8F81C5B012100125280 /* Main.storyboard in Resources */,
+				F77C58BF1C608EBE00E49714 /* electriclove.mp3 in Resources */,
 				EBFD36321C5B14D0008AD593 /* TextFieldCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0870EBC49EC2080276407E91 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TMTracker/Pods-TMTracker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4138EF6008E4D5803C63DBAD /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TMTracker/Pods-TMTracker-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		73AD04B2E64AC1CB55F0290E /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F762C8EB1C5B012100125280 /* Sources */ = {
@@ -261,23 +342,30 @@
 		};
 		F762C9021C5B012100125280 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 52F7D0D1EBD78323A79202E8 /* Pods-TMTracker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = TMTracker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.emc.TMTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TMTracker/TMTracker-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		F762C9031C5B012100125280 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C7FC05D93D1FFF5E6A3E6BF6 /* Pods-TMTracker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = TMTracker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.emc.TMTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TMTracker/TMTracker-Bridging-Header.h";
 			};
 			name = Release;
 		};

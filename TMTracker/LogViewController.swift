@@ -27,6 +27,14 @@ class LogViewController: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        let alertView = SCLAlertView()
+        alertView.shouldDismissOnTapOutside = true
+        alertView.soundURL = NSURL.fileURLWithPath(NSBundle.mainBundle().pathForResource("electriclove", ofType: "mp3")!)
+        alertView.showSuccess(self, title: "Welcome", subTitle: "Have fun using TMTracker!", closeButtonTitle: nil, duration: -1.0)
+    }
 
 
     

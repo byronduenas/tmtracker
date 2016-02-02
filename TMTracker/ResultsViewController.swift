@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ResultsViewController: UITableViewController,UIPickerViewDataSource,UIPickerViewDelegate {
+class ResultsViewController: UITableViewController,UIPickerViewDataSource,UIPickerViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     let timePickerData = [
         ["0m","1m","2m","3m","5m","6m","7m"],
@@ -16,8 +16,12 @@ class ResultsViewController: UITableViewController,UIPickerViewDataSource,UIPick
     ]
     let fillerPickerData = ["0","1","2","3","4","5","10","15","20"]
     
+    var imagePickerController : UIImagePickerController!
+    
+    @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var timePicker: UIPickerView!
+
     
     //MARK -Instance Methods
     func updateLabel(){
@@ -25,9 +29,18 @@ class ResultsViewController: UITableViewController,UIPickerViewDataSource,UIPick
         let sec = timePickerData[1][timePicker.selectedRowInComponent(1)]
         print(min + sec)
     }
+    @IBAction func takePicture(sender: AnyObject) {
+        presentViewController(imagePickerController, animated: true) { () -> Void in
+            print("presentation complete!")
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        imagePickerController = UIImagePickerController()
+        imagePickerController.sourceType = .Camera
+        imagePickerController.delegate = self
+        
         timePicker.delegate = self
         timePicker.dataSource = self
         
@@ -40,6 +53,15 @@ class ResultsViewController: UITableViewController,UIPickerViewDataSource,UIPick
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
+        
+        imageView.image = image
+        picker.dismissViewControllerAnimated(true) { () -> Void in
+            print("dismissed!")
+        }
+    }
+    
     
     //MARK -Delgates and DataSource
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
