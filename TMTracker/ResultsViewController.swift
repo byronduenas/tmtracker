@@ -14,10 +14,11 @@ class ResultsViewController: UITableViewController,UIPickerViewDataSource,UIPick
         ["0m","1m","2m","3m","5m","6m","7m"],
         ["10s","20s","30s","40s","50s"]
     ]
-    let fillerPickerData = ["0","1","2","3","4","5","10","15","20"]
+    let fillerPickerData = [["0","1","2","3","4","5","10","15","20"]]
     
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var timePicker: UIPickerView!
+    @IBOutlet weak var fillerCountPicker: UIPickerView!
     
     //MARK -Instance Methods
     func updateLabel(){
@@ -30,8 +31,12 @@ class ResultsViewController: UITableViewController,UIPickerViewDataSource,UIPick
         super.viewDidLoad()
         timePicker.delegate = self
         timePicker.dataSource = self
-        
+        fillerCountPicker.delegate = self
+        fillerCountPicker.dataSource = self
+
+        timePicker.selectRow(4, inComponent: 0, animated: false)
         timePicker.selectRow(2, inComponent: 1, animated: false)
+        fillerCountPicker.selectRow(5, inComponent: 0, animated: false)
         updateLabel()
 
         // Uncomment the following line to preserve selection between presentations
@@ -43,15 +48,27 @@ class ResultsViewController: UITableViewController,UIPickerViewDataSource,UIPick
     
     //MARK -Delgates and DataSource
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
-        return timePickerData.count
+        if(pickerView == timePicker){
+            return timePickerData.count
+        }else{
+            return fillerPickerData.count
+        }
     }
     
     func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return timePickerData[component].count
+        if(pickerView == timePicker){
+            return timePickerData[component].count
+        }else{
+            return fillerPickerData[component].count
+        }
     }
     
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return timePickerData[component][row]
+        if(pickerView == timePicker){
+            return timePickerData[component][row]
+        }else{
+            return fillerPickerData[component][row]
+        }
     }
     
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
